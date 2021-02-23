@@ -1,6 +1,7 @@
 # Exploratory Data Analysis
 
 # Loading Packages
+  library(tidyverse)
 
 # Downloading data and reading data
 
@@ -16,11 +17,12 @@
   }  
   
   # Reading the files
-  NEI <- readRDS("summarySCC_PM25.rds")
-  SCC <- readRDS("Source_Classification_Code.rds")
+  if (!exists("NEI")) {
+      NEI <- readRDS("summarySCC_PM25.rds")
 
-# Handling data
-  head(NEI)
-  head(SCC)
-  str(NEI)
-  str(SCC)
+  }
+  
+  if (!exists("SCC")) {
+      SCC <- readRDS("Source_Classification_Code.rds")
+
+  }

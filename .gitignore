@@ -4,3 +4,4 @@
 .Ruserdata
 *.zip
 *.rds
+.Rproj.user
